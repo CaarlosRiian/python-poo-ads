@@ -1,19 +1,11 @@
-from conta import Conta
+from conta import Conta, Cliente
 
-def cria_conta(self, numero, titular, saldo, limite):
-    conta = {"numero": numero, "titular": titular, "saldo": saldo, "limite": limite}
-    return conta
+cliente1 = Cliente('Robert', 'Diniz', 165141365561)
+conta1 = Conta(2022, cliente1.nome, 150, 1500)
 
-def deposita(self, conta, valor):
-    conta['saldo'] += valor
+conta1.deposita(50.0)
+conta1.extrato()
+conta1.saca(20.0)
+conta1.extrato()
+conta1.historico.imprime()
 
-def saca(self, conta, valor):
-    conta['saldo'] -= valor
-
-def extrato(self, conta):
-    print("numero: {} \nsaldo: {}".format(conta['numero'], conta['saldo']))
-
-Conta.deposita(50.0)
-Conta.extrato()
-Conta.saca(20.0)
-Conta.extrato()
